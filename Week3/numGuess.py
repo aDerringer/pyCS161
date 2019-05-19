@@ -1,41 +1,23 @@
-'''
-main() {
-     int number,
-         count = 0,
-         guess;
-
-     //Asks user to input a number to be guessed. That value assigned to number.
-     cout << "Enter the number for the player to guess." << endl;
-     cin >> number;
-
-     //fist asked to guess outside following loop.
-     cout << "Enter your guess." << endl;
-
-     //do while loop used to ensure that loop iterates at least once and
-     //increments the count value. Ends at the end if guess equals number.
-     do
-     {
-          cin >> guess;
-
-          count++;
-
-          //Runs in conditions when the previous guess was too high.
-          if (guess > number)
-               cout << "Too high - try again." << endl;
-
-          //Runs in conditions when the previous guess was too low.
-          else if (guess < number)
-               cout << "Too low - try again." << endl;
-
-     }while (guess != number);
-
-     cout << "You guessed it in " << count << " tries." << endl;
-
-     return 0;
-}'''
+##########################################################################
+# Author: Andrew Derringer
+# Program: Guess Number
+# Last Modified: 4/29/2019
+# Description:
+#       Overview:   User enters number to be guessed by another user. If
+#                   incorrect the user receives hints.
+#       Inputs:     Correct number and a series of guesses.
+#       Outputs:    Hints for higher or lower and count of numbers guessed
+#                   upon completion.
+##########################################################################
 
 from helperFunctions import validateInt
 
+###
+# Function: Guess number
+# Param: None
+# Pre: User enters number for another to guess.
+# Post: ONce number is correctly guessed a count of number of attempts in printed.
+###
 def guessNum():
 
     trueNum = validateInt("Pick a number for another user to guess:")

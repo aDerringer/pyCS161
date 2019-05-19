@@ -1,42 +1,11 @@
-"""
-/****************************************
-** Name: Andrew Derringer
-** Date: 101/2018
-** Description: This program asks the user for the temperature in celsius
-** and returns it converted to fahrenheit.
-***************************************/
-
-#include <iostream>
-using std::cout;
-using std::cin;
-using std::endl;
-
-main()
-{
-     double celsius,
-            fahrenheit;
-
-     cout << "Please enter a Celsius temperature." << endl;
-     cin >> celsius;
-
-     fahrenheit = (9.0/5.0) * celsius + 32;			//fahrenheit is calculated after the celsius variable is assigned by the user
-
-     cout << "The equivalent Fahrenheit temperature is:\n"
-          << fahrenheit << endl;
-
-     return 0;
-}
-"""
-
 ##########################################################################
 # Author: Andrew Derringer
-# Program: Smallest Amount of Change
-# Last Modified: 4/29/2019
+# Program: Convert temperature from celcius to fahrenheit
+# Last Modified: 5/18/2019
 # Description:
-#       Overview:   Dertermines smallest amount of change possible from
-#                   user determined amount.
-#       Inputs:     
-#       Outputs:    average of n integers
+#       Overview:   Convert user input temerature in celcius to fahrenheit.
+#       Inputs:     User input temperature in celcius.
+#       Outputs:    Temperature in celcius.
 ##########################################################################
 
 from helperFunctions import validateInt
@@ -55,4 +24,4 @@ def convertTemperature():
 
     print("The equivalent temperature to {} celcius is {} fahrenheit.\n".format(celcius, fahrenheit))
 
-#convertTemperature()
+convertTemperature()

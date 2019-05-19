@@ -1,40 +1,34 @@
-'''
-double fallDistance(double time)
-{
-     const double GRAVITY = 9.8;
-     double distance;
-
-     distance = (0.5 * (GRAVITY * pow(time, 2.0)));
-
-     return distance;
-}
-
-/***************************************
-main()
-{
-     double time,
-            distance;
-     cout << "This program tells you how far an object fell\n";
-     cout << "How many seconds was the object falling?" << endl;
-     cin >> time;
-
-     distance = fallDistance(time);
-
-     cout << "The object traveled " << fallDistance(time)  << " meters." << endl;
-     
-     return 0;
-}
-***************************************/
-'''
+##########################################################################
+# Author: Andrew Derringer
+# Program: Calculate Fall Distance
+# Last Modified: 5/12/2019
+# Description:
+#       Overview:   User enters time an object was falling and distance is
+#                   computed and returned.
+#       Inputs:     Object fall time.
+#       Outputs:    Object fall distance.
+##########################################################################
 
 from helperFunctions import GRAVITY
 from helperFunctions import toThePower
 from helperFunctions import validateInt
 
+###
+# Function: Fall Distance
+# Param: Object fall time
+# Pre: None
+# Post: Fall distance calculated and returned.
+###
 def fallDistance(time):
 
     return (0.5 * (GRAVITY * toThePower(time, 2)))
 
+###
+# Function: Calculate Fall
+# Param: None
+# Pre: None
+# Post: Object fall time requested and distance printed.
+###
 def calculateFall():
 
     print("Calculating the distance an object fell...")
